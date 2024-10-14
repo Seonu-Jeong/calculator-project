@@ -29,12 +29,10 @@ public class Calculator {
             throw e;
         }
 
-        result_list.add(result);
-
         return result;
     }
 
-    public void setResult_list(int a){
+    public void setResult_list(int a) {
         result_list.add(a);
     }
 
@@ -42,4 +40,7 @@ public class Calculator {
         return result_list;
     }
 
+    public void removeResult() {
+        result_list.removeFirst();
+    }
 }

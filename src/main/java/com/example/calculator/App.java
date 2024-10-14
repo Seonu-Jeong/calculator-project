@@ -19,14 +19,17 @@ public class App {
             String op = sc.next();
 
             int result = 0;
+            Calculator calculator = new Calculator();
 
             try {
-                Calculator calculator = new Calculator();
 
                 result = calculator.calculate(op, a, b);
 
                 System.out.println("결과: " + result);
-            }catch (ArithmeticException e) {
+
+                calculator.setResult_list(result);
+
+            } catch (ArithmeticException e) {
                 System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
             }
 
@@ -37,6 +40,11 @@ public class App {
             if (answer.equals("exit"))
                 break;
 
+            System.out.println("가장 먼저 저장된 데이터를 삭제하시겠습니까? (remove 입력 시 삭제)");
+            answer = sc.next();
+
+            if (answer.equals("remove"))
+                calculator.removeResult();
 
         } while (true);
     }
