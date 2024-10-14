@@ -34,5 +34,12 @@ public class Calculator {
         return result;
     }
 
+    public void setResult_list(int a){
+        result_list.add(a);
+    }
+
+    public List<Integer> getResult_list() {
+        return result_list;
+    }
 
 }
