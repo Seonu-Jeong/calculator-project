@@ -25,7 +25,8 @@ public class Calculator {
                 case "/":
                     result = a / b;
             }
-        } catch (Exception e) {
+        } catch (ArithmeticException e) {
+            System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다");
             result=-1;
         }
 
